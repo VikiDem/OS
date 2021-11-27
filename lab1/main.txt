@@ -1,0 +1,78 @@
+viktory@DESKTOP-TU88M9R:/mnt/c/Users/User/Desktop/OS/Lab1$ strace ./a.out 
+execve("./a.out", ["./a.out"], 0x7ffc74589030 /* 52 vars */) = 0
+brk(NULL)                               = 0x55e222f86000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc7e445740) = -1 EINVAL (Недопустимый аргумент)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (Нет такого файла или каталога)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=100709, ...}) = 0
+mmap(NULL, 100709, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f2128722000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\363\377?\332\200\270\27\304d\245n\355Y\377\t\334"..., 68, 880) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=2029224, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2128720000
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\363\377?\332\200\270\27\304d\245n\355Y\377\t\334"..., 68, 880) = 68
+mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f212852e000
+mprotect(0x7f2128553000, 1847296, PROT_NONE) = 0
+mmap(0x7f2128553000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7f2128553000
+mmap(0x7f21286cb000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0x7f21286cb000
+mmap(0x7f2128716000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f2128716000
+mmap(0x7f212871c000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f212871c000
+close(3)                                = 0
+arch_prctl(ARCH_SET_FS, 0x7f2128721540) = 0
+mprotect(0x7f2128716000, 12288, PROT_READ) = 0
+mprotect(0x55e22240a000, 4096, PROT_READ) = 0
+mprotect(0x7f2128768000, 4096, PROT_READ) = 0
+munmap(0x7f2128722000, 100709)          = 0
+write(0, "\320\222\320\262\320\265\320\264\320\270 \320\262 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\270\320\271"..., 200Введи в следующий двух строках - пути к файлам, куда я буду отправлять выходные данные ^_^
+) = 200
+read(0, res
+"res\n", 200)                   = 4
+read(0, res2
+"res2\n", 200)                  = 5
+openat(AT_FDCWD, "res", O_WRONLY|O_CREAT|O_APPEND, 0700) = 3
+openat(AT_FDCWD, "res2", O_WRONLY|O_CREAT|O_APPEND, 0700) = 4
+openat(AT_FDCWD, "pip1", O_RDWR|O_CREAT, 0700) = 5
+mmap(NULL, 200, PROT_READ|PROT_WRITE, MAP_SHARED, 5, 0) = 0x7f2128767000
+ftruncate(5, 200)                       = 0
+openat(AT_FDCWD, "ex1", O_RDWR|O_CREAT, 0700) = 6
+mmap(NULL, 1, PROT_READ|PROT_WRITE, MAP_SHARED, 6, 0) = 0x7f212873a000
+ftruncate(6, 1)                         = 0
+openat(AT_FDCWD, "pip2", O_RDWR|O_CREAT, 0700) = 7
+mmap(NULL, 200, PROT_READ|PROT_WRITE, MAP_SHARED, 7, 0) = 0x7f2128739000
+ftruncate(7, 200)                       = 0
+openat(AT_FDCWD, "ex2", O_RDWR|O_CREAT, 0700) = 8
+mmap(NULL, 8, PROT_READ|PROT_WRITE, MAP_SHARED, 8, 0) = 0x7f2128738000
+ftruncate(8, 1)                         = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f2128721810) = 36394
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f2128721810) = 36396
+write(0, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\320\262\320\276\320\270 \321\201\321\202\321\200\320\276"..., 50Введите свои строки
+) = 50
+fstat(0, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+brk(NULL)                               = 0x55e222f86000
+brk(0x55e222fa7000)                     = 0x55e222fa7000
+read(0, qwerty
+"qwerty\n", 1024)               = 7
+write(0, "\320\237\320\265\321\200\320\262\321\213\320\271 \321\204\320\260\320\271\320\273\n\0\0\0\0\0\0\0\0\0\0"..., 50Первый файл
+) = 50
+read(0, [1] Успешно записано! [1]
+ttyyu
+"ttyyu\n", 1024)                = 6
+write(0, "\320\222\321\202\320\276\321\200\320\276\320\271 \321\204\320\260\320\271\320\273\n\0\0\0\0\0\0\0\0\0\0"..., 50Второй файл
+) = 50
+read(0, [2] Успешно записано! [2]
+"", 1024)                       = 0
+close(3)                                = 0
+close(4)                                = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=36396, si_uid=1000, si_status=0, si_utime=92652, si_stime=2} ---
+unlink("ex1")                           = -1 ENOENT (Нет такого файла или каталога)
+unlink("ex2")                           = -1 ENOENT (Нет такого файла или каталога)
+unlink("pip1")                          = -1 ENOENT (Нет такого файла или каталога)
+unlink("pip2")                          = -1 ENOENT (Нет такого файла или каталога)
+exit_group(0)                           = ?
++++ exited with 0 +++
